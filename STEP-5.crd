@@ -1,11 +1,11 @@
 {
   "crd_version": 1,
-  "name": "Enterprise MCP Resource Gateway step 4",
+  "name": "Enterprise MCP Resource Gateway step 5",
   "description": "Cumulative educational gateway architecture (not real MCP protocol).",
   "generated_at": "2026-10-10T11:42:00Z",
   "source": {
     "repo": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
-    "revision": "step-04",
+    "revision": "step-05",
     "roots": {
       "backend": "app"
     },
@@ -14,11 +14,11 @@
     ]
   },
   "step": {
-    "no": 4,
+    "no": 5,
     "of": 6,
-    "title": "Typed tool schemas and validated outputs",
-    "branch": "step-04",
-    "previous": "STEP-3.crd",
+    "title": "Auditing and error boundaries",
+    "branch": "step-05",
+    "previous": "STEP-4.crd",
     "removed": []
   },
   "flows": [
@@ -159,13 +159,49 @@
       "owner": "feature_resources",
       "component_reason": "Teaches isolated tool contract and behavior.",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "unchanged",
       "inputs": [],
       "validations": [],
       "operations": [],
       "outputs": [
         {
           "id": "out-tool",
+          "name": "result",
+          "description": "Contract result or bounded rejection."
+        }
+      ],
+      "attributes": {
+        "validations_note": "See Python source and pytest contract checks."
+      }
+    },
+    {
+      "id": "be.audit",
+      "name": "audit",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "The audit component introduced by the cumulative learning project.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/services/audit.py",
+        "symbol": "audit",
+        "lines": [
+          1,
+          30
+        ]
+      },
+      "owner": "feature_resources",
+      "component_reason": "Teaches isolated audit contract and behavior.",
+      "status": "observed",
+      "step_change": "added",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "out-audit",
           "name": "result",
           "description": "Contract result or bounded rejection."
         }
