@@ -1007,7 +1007,7 @@
         "gateway"
       ],
       "source": {
-        "file": "app/features/feature_resources/tests/test_integration.py",
+        "file": "tests/test_integration.py",
         "symbol": "test_full_resource_flow"
       },
       "owner": "feature_resources",
@@ -1033,7 +1033,7 @@
             "component": "door.discovery",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_full_resource_flow"
+            "evidence": "tests/test_integration.py — test_full_resource_flow"
           }
         },
         {
@@ -1046,7 +1046,7 @@
             "component": "door.resource",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_full_resource_flow"
+            "evidence": "tests/test_integration.py — test_full_resource_flow"
           }
         },
         {
@@ -1059,7 +1059,7 @@
             "component": "door.purchase_order",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_full_resource_flow"
+            "evidence": "tests/test_integration.py — test_full_resource_flow"
           }
         }
       ],
@@ -1085,7 +1085,7 @@
         "gateway"
       ],
       "source": {
-        "file": "app/features/feature_resources/tests/test_integration.py",
+        "file": "tests/test_integration.py",
         "symbol": "test_fail_closed"
       },
       "owner": "feature_resources",
@@ -1111,7 +1111,7 @@
             "component": "door.discovery",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_fail_closed"
+            "evidence": "tests/test_integration.py — test_fail_closed"
           }
         },
         {
@@ -1124,7 +1124,7 @@
             "component": "door.resource",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_fail_closed"
+            "evidence": "tests/test_integration.py — test_fail_closed"
           }
         },
         {
@@ -1137,7 +1137,7 @@
             "component": "door.purchase_order",
             "type": "call",
             "label": "calls",
-            "evidence": "app/features/feature_resources/tests/test_integration.py — test_fail_closed"
+            "evidence": "tests/test_integration.py — test_fail_closed"
           }
         }
       ],
