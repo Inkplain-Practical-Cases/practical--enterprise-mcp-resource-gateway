@@ -6,75 +6,75 @@
   },
   "current": "content",
   "stages": {
+    "inkp": {
+      "outputs": {
+        "tabs": 6,
+        "missing_links": 0,
+        "inkp_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway/blob/main/enterprise-mcp-resource-gateway.inkp",
+        "linked_executors": 87,
+        "inkp_path": "enterprise-mcp-resource-gateway.inkp"
+      },
+      "status": "done",
+      "started_at": "2026-10-10T11:52:27.272Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "summary": "Six ordered Simulator tabs STEP-1..STEP-6 rebuilt from the revised source-level CRDs, with 87 linked Process Executor documents. MCP get_inkp_summary confirms 0 missing links in every tab.",
+      "finished_at": "2026-10-10T11:52:27.272Z"
+    },
     "content": {
       "status": "in_progress",
-      "summary": "STEP-6 implementation test links corrected and STEP-4 component-specific 4M expanded/read back; full portal semantic/source audit still open.",
+      "finished_at": null,
       "outputs": {
-        "linked_executors": 87,
-        "ci_jobs_total": 7,
-        "items": 45,
-        "ci_jobs_success": 7,
         "inkp_tabs": 6,
-        "structural_qa": true,
-        "content_quality_qa": true,
+        "categories": 8,
+        "ci_jobs_success": 7,
         "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
         "overview": 18,
+        "content_quality_qa": true,
+        "ci_jobs_total": 7,
+        "items": 45,
+        "linked_executors": 87,
         "conclusion": 3,
-        "categories": 8,
+        "structural_qa": true,
         "step_items": 24,
         "missing_links": 0
       },
-      "finished_at": null,
       "started_at": "2026-10-10T11:52:29.363Z",
-      "updated_by": "api-key:for-chatgpt-test-2"
-    },
-    "inkp": {
-      "started_at": "2026-10-10T11:52:27.272Z",
-      "updated_by": "api-key:for-chatgpt-test-2",
-      "finished_at": "2026-10-10T11:52:27.272Z",
-      "status": "done",
-      "outputs": {
-        "inkp_path": "enterprise-mcp-resource-gateway.inkp",
-        "tabs": 6,
-        "inkp_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway/blob/main/enterprise-mcp-resource-gateway.inkp",
-        "missing_links": 0,
-        "linked_executors": 87
-      },
-      "summary": "Six ordered Simulator tabs STEP-1..STEP-6 rebuilt from the revised source-level CRDs, with 87 linked Process Executor documents. MCP get_inkp_summary confirms 0 missing links in every tab."
-    },
-    "intro": {
-      "finished_at": "2026-10-10T09:03:20.195Z",
-      "summary": "Verified Junior FDE case, six skill links, seven substantial introduction sections with labeled HTML architecture diagram and existing Media Library cover (reused; bespoke cover remains optional).",
-      "outputs": {
-        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
-        "cover_reused": true,
-        "level": "junior",
-        "skills_linked": 6,
-        "intro_sections": 7
-      },
-      "started_at": "2026-10-10T08:45:37.259Z",
-      "status": "done",
+      "summary": "Portal 45 lessons exist, but STEP-4..6 lessons include overly brief source explanations and final semantic/source audit remains incomplete; keeping Stage 4 open until repaired and verified.",
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "repo": {
       "status": "done",
-      "started_at": "2026-10-10T09:03:48.305Z",
-      "finished_at": "2026-10-10T12:12:06.596Z",
-      "updated_by": "api-key:for-chatgpt-test-2",
       "summary": "Corrected invalid integration-test source paths in STEP-6.crd and FINAL.crd to tests/test_integration.py. MCP read-back verified both; GitHub Actions pytest completed successfully on both new STEP-6 and main commits.",
+      "started_at": "2026-10-10T09:03:48.305Z",
       "outputs": {
-        "step6_commit": "2ef75e92c08b2b61dc4bb8dc677f6291f7605c8e",
-        "ci_verified": true,
         "ci_jobs_success": 7,
-        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance",
-        "steps": 6,
-        "main_commit": "a73a9b2ebcfb7471613514bf133f70eada009b82",
         "source_paths_corrected": true,
-        "ci_jobs_total": 7,
+        "ci_verified": true,
+        "main_commit": "a73a9b2ebcfb7471613514bf133f70eada009b82",
+        "step6_commit": "2ef75e92c08b2b61dc4bb8dc677f6291f7605c8e",
+        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
         "main_committed": true,
-        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway"
+        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance",
+        "ci_jobs_total": 7,
+        "steps": 6
+      },
+      "finished_at": "2026-10-10T12:12:06.596Z",
+      "updated_by": "api-key:for-chatgpt-test-2"
+    },
+    "intro": {
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "summary": "Verified Junior FDE case, six skill links, seven substantial introduction sections with labeled HTML architecture diagram and existing Media Library cover (reused; bespoke cover remains optional).",
+      "started_at": "2026-10-10T08:45:37.259Z",
+      "status": "done",
+      "finished_at": "2026-10-10T09:03:20.195Z",
+      "outputs": {
+        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
+        "skills_linked": 6,
+        "level": "junior",
+        "intro_sections": 7,
+        "cover_reused": true
       }
     }
   },
-  "updated_at": "2026-10-10T16:10:20.232Z"
+  "updated_at": "2026-10-10T17:02:09.776Z"
 }
