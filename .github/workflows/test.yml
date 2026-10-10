@@ -1,4 +1,4 @@
-# Run the learning app's regression suite on pushes and PRs.
+# Each push verifies the branch that was actually committed.
 name: pytest
 on: [push, pull_request]
 jobs:

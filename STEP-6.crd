@@ -1,11 +1,11 @@
 {
   "crd_version": 1,
-  "name": "Enterprise MCP Resource Gateway step 5",
+  "name": "Enterprise MCP Resource Gateway step 6",
   "description": "Cumulative educational gateway architecture (not real MCP protocol).",
   "generated_at": "2026-10-10T11:42:00Z",
   "source": {
     "repo": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
-    "revision": "step-05",
+    "revision": "step-06",
     "roots": {
       "backend": "app"
     },
@@ -14,11 +14,11 @@
     ]
   },
   "step": {
-    "no": 5,
+    "no": 6,
     "of": 6,
-    "title": "Auditing and error boundaries",
-    "branch": "step-05",
-    "previous": "STEP-4.crd",
+    "title": "Integration tests CI and hardening",
+    "branch": "step-06",
+    "previous": "STEP-5.crd",
     "removed": []
   },
   "flows": [
@@ -195,13 +195,49 @@
       "owner": "feature_resources",
       "component_reason": "Teaches isolated audit contract and behavior.",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "unchanged",
       "inputs": [],
       "validations": [],
       "operations": [],
       "outputs": [
         {
           "id": "out-audit",
+          "name": "result",
+          "description": "Contract result or bounded rejection."
+        }
+      ],
+      "attributes": {
+        "validations_note": "See Python source and pytest contract checks."
+      }
+    },
+    {
+      "id": "be.integration",
+      "name": "integration",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "The integration component introduced by the cumulative learning project.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "tests/test_integration.py",
+        "symbol": "integration",
+        "lines": [
+          1,
+          30
+        ]
+      },
+      "owner": "feature_resources",
+      "component_reason": "Teaches isolated integration contract and behavior.",
+      "status": "observed",
+      "step_change": "added",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "out-integration",
           "name": "result",
           "description": "Contract result or bounded rejection."
         }
