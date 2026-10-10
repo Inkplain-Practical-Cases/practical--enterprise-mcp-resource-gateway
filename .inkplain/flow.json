@@ -22,7 +22,7 @@
     },
     "repo": {
       "status": "done",
-      "summary": "Six cumulative GitHub branches with runnable typed FastAPI code, source-level CRDs, learning notes and final main/FINAL.crd. All 7 latest GitHub Actions pytest jobs (six steps plus main) read back as completed/success.",
+      "summary": "Repository finalized: 6 cumulative STEP branches, FINAL.crd, README, source-function CRD relations. Verified 7/7 latest GitHub Actions pytest runs completed successfully (STEP-1..STEP-6 and main).",
       "started_at": "2026-10-10T09:03:48.305Z",
       "finished_at": "2026-10-10T12:12:06.596Z",
       "updated_by": "api-key:for-chatgpt-test-2",
@@ -30,7 +30,7 @@
         "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
         "steps": 6,
         "main_committed": true,
-        "ci_verified": false,
+        "ci_verified": true,
         "ci_jobs_success": 7,
         "ci_jobs_total": 7,
         "main_commit": "5439d553d14b364380d275eb276c9be99ac766a0",
@@ -67,5 +67,5 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T12:12:06.596Z"
+  "updated_at": "2026-10-10T12:17:30.607Z"
 }
