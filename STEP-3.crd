@@ -1,11 +1,11 @@
 {
   "crd_version": 1,
-  "name": "Enterprise MCP Resource Gateway step 3",
-  "description": "Cumulative educational gateway architecture (not real MCP protocol).",
-  "generated_at": "2026-10-10T11:42:00Z",
+  "name": "Enterprise MCP Resource Gateway — STEP-3",
+  "description": "Cumulative source-symbol-level map of synthetic HTTP resource gateway.",
+  "generated_at": "2026-10-10T12:00:00Z",
   "source": {
     "repo": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
-    "revision": "step-03",
+    "revision": "step-03-client-discovery-and-session-transport",
     "roots": {
       "backend": "app"
     },
@@ -17,125 +17,676 @@
     "no": 3,
     "of": 6,
     "title": "Client discovery and session transport",
-    "branch": "step-03",
+    "branch": "step-03-client-discovery-and-session-transport",
     "previous": "STEP-2.crd",
     "removed": []
   },
   "flows": [
     {
       "id": "gateway",
-      "name": "Authorized resource access",
-      "description": "Synthetic learning flow",
-      "entry": "be.catalog"
+      "name": "Tenant-scoped gateway",
+      "description": "A read-only synthetic enterprise-resource request",
+      "entry": "door.resources"
     }
   ],
   "components": [
     {
-      "id": "be.catalog",
+      "id": "model.Resource",
+      "name": "Resource",
+      "kind": "class",
+      "side": "backend",
+      "layer": "schema",
+      "description": "Typed synthetic resource record declares URI, owner, content and description.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/models/resource.py",
+        "symbol": "Resource"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by Resource."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "provider.catalog",
       "name": "catalog",
       "kind": "function",
       "side": "backend",
       "layer": "provider",
-      "description": "The catalog component introduced by the cumulative learning project.",
+      "description": "Return deterministic in-memory resource fixtures.",
       "flows": [
         "gateway"
       ],
       "source": {
         "file": "app/features/feature_resources/providers/catalog.py",
-        "symbol": "catalog",
-        "lines": [
-          1,
-          30
-        ]
+        "symbol": "catalog"
       },
       "owner": "feature_resources",
-      "component_reason": "Teaches isolated catalog contract and behavior.",
-      "status": "observed",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
       "step_change": "unchanged",
-      "inputs": [],
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
       "validations": [],
       "operations": [],
       "outputs": [
         {
-          "id": "out-catalog",
+          "id": "output-result",
           "name": "result",
-          "description": "Contract result or bounded rejection."
+          "description": "Typed value or explicit HTTP rejection as implemented by catalog."
         }
       ],
       "attributes": {
-        "validations_note": "See Python source and pytest contract checks."
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
       }
     },
     {
-      "id": "be.authorization",
-      "name": "authorization",
+      "id": "service.list_resources",
+      "name": "list_resources",
       "kind": "function",
       "side": "backend",
       "layer": "service",
-      "description": "The authorization component introduced by the cumulative learning project.",
+      "description": "Filter and serialize resource metadata from the catalog.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/services/list_resources.py",
+        "symbol": "list_resources"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "catalog",
+          "origin": "imported",
+          "description": "Invokes provider.catalog as a synchronous dependency from services/list_resources.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "provider.catalog",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/services/list_resources.py — list_resources"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by list_resources."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "handler.handle_resources",
+      "name": "handle_resources",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "Delegate the list operation to the scoped service.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/handlers/handle_resources.py",
+        "symbol": "handle_resources"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "list_resources",
+          "origin": "imported",
+          "description": "Invokes service.list_resources as a synchronous dependency from handlers/handle_resources.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.list_resources",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/handlers/handle_resources.py — handle_resources"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by handle_resources."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "door.resources",
+      "name": "resources",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "Receive GET /resources and return serialized metadata.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/doors/router.py",
+        "symbol": "resources"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "handle_resources",
+          "origin": "imported",
+          "description": "Invokes handler.handle_resources as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "handler.handle_resources",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — resources"
+          }
+        },
+        {
+          "id": "op-1",
+          "title": "authorize",
+          "origin": "imported",
+          "description": "Invokes service.authorize as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.authorize",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — resources"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by resources."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "service.authorize",
+      "name": "authorize",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Check fixed demonstration bearer identity and allowed tenant; deny on failure.",
       "flows": [
         "gateway"
       ],
       "source": {
         "file": "app/features/feature_resources/services/authorization.py",
-        "symbol": "authorization",
-        "lines": [
-          1,
-          30
-        ]
+        "symbol": "authorize"
       },
       "owner": "feature_resources",
-      "component_reason": "Teaches isolated authorization contract and behavior.",
-      "status": "observed",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
       "step_change": "unchanged",
-      "inputs": [],
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
       "validations": [],
       "operations": [],
       "outputs": [
         {
-          "id": "out-authorization",
+          "id": "output-result",
           "name": "result",
-          "description": "Contract result or bounded rejection."
+          "description": "Typed value or explicit HTTP rejection as implemented by authorize."
         }
       ],
       "attributes": {
-        "validations_note": "See Python source and pytest contract checks."
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
       }
     },
     {
-      "id": "be.discovery",
-      "name": "discovery",
+      "id": "service.read_resource",
+      "name": "read_resource",
       "kind": "function",
       "side": "backend",
       "layer": "service",
-      "description": "The discovery component introduced by the cumulative learning project.",
+      "description": "Read one resource only when its owner matches the authorized tenant.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/services/list_resources.py",
+        "symbol": "read_resource"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "catalog",
+          "origin": "imported",
+          "description": "Invokes provider.catalog as a synchronous dependency from services/list_resources.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "provider.catalog",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/services/list_resources.py — read_resource"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by read_resource."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "handler.handle_read",
+      "name": "handle_read",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "Translate a not-found resource into HTTP 404.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/handlers/handle_resources.py",
+        "symbol": "handle_read"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "read_resource",
+          "origin": "imported",
+          "description": "Invokes service.read_resource as a synchronous dependency from handlers/handle_resources.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.read_resource",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/handlers/handle_resources.py — handle_read"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by handle_read."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "door.resource",
+      "name": "resource",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "Receive GET /resource and authorize before reading.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/doors/router.py",
+        "symbol": "resource"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "unchanged",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "authorize",
+          "origin": "imported",
+          "description": "Invokes service.authorize as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.authorize",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — resource"
+          }
+        },
+        {
+          "id": "op-1",
+          "title": "handle_read",
+          "origin": "imported",
+          "description": "Invokes handler.handle_read as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "handler.handle_read",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — resource"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by resource."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "model.Discovery",
+      "name": "Discovery",
+      "kind": "class",
+      "side": "backend",
+      "layer": "schema",
+      "description": "Typed metadata response containing protocol name, capabilities and visible resources.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/models/discovery.py",
+        "symbol": "Discovery"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "added",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by Discovery."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "service.discover",
+      "name": "discover",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Build discovery metadata from authorized resource list.",
       "flows": [
         "gateway"
       ],
       "source": {
         "file": "app/features/feature_resources/services/discovery.py",
-        "symbol": "discovery",
-        "lines": [
-          1,
-          30
-        ]
+        "symbol": "discover"
       },
       "owner": "feature_resources",
-      "component_reason": "Teaches isolated discovery contract and behavior.",
-      "status": "observed",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
       "step_change": "added",
-      "inputs": [],
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
       "validations": [],
-      "operations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "list_resources",
+          "origin": "imported",
+          "description": "Invokes service.list_resources as a synchronous dependency from services/discovery.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.list_resources",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/services/discovery.py — discover"
+          }
+        }
+      ],
       "outputs": [
         {
-          "id": "out-discovery",
+          "id": "output-result",
           "name": "result",
-          "description": "Contract result or bounded rejection."
+          "description": "Typed value or explicit HTTP rejection as implemented by discover."
         }
       ],
       "attributes": {
-        "validations_note": "See Python source and pytest contract checks."
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "handler.handle_discovery",
+      "name": "handle_discovery",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "Serialize the scoped discovery response.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/handlers/handle_discovery.py",
+        "symbol": "handle_discovery"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "added",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "discover",
+          "origin": "imported",
+          "description": "Invokes service.discover as a synchronous dependency from handlers/handle_discovery.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.discover",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/handlers/handle_discovery.py — handle_discovery"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by handle_discovery."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
+      }
+    },
+    {
+      "id": "door.discovery",
+      "name": "discovery",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "Receive GET /discover with header-based authorization.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/doors/router.py",
+        "symbol": "discovery"
+      },
+      "owner": "feature_resources",
+      "component_reason": "A separately defined source-level API, model or service function.",
+      "status": "inferred",
+      "step_change": "added",
+      "inputs": [
+        {
+          "id": "input-context",
+          "name": "context",
+          "description": "Inputs are defined by the Python signature and injected dependencies; inspect source for exact fields."
+        }
+      ],
+      "validations": [],
+      "operations": [
+        {
+          "id": "op-0",
+          "title": "authorize",
+          "origin": "imported",
+          "description": "Invokes service.authorize as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "service.authorize",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — discovery"
+          }
+        },
+        {
+          "id": "op-1",
+          "title": "handle_discovery",
+          "origin": "imported",
+          "description": "Invokes handler.handle_discovery as a synchronous dependency from doors/router.py; inspect the source for conditions and return mapping.",
+          "show": true,
+          "calls": {
+            "component": "handler.handle_discovery",
+            "type": "call",
+            "label": "calls",
+            "evidence": "app/features/feature_resources/doors/router.py — discovery"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output-result",
+          "name": "result",
+          "description": "Typed value or explicit HTTP rejection as implemented by discovery."
+        }
+      ],
+      "attributes": {
+        "source_note": "Source association is accurate; precise line ranges and parameters require detailed extraction."
       }
     }
   ],
