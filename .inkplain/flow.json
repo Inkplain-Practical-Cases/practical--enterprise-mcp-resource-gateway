@@ -39,7 +39,7 @@
         "missing_links": 0
       },
       "started_at": "2026-10-10T11:52:29.363Z",
-      "summary": "Stage 4 partial QA: STEP-4 HTTP tool path now explained with source-accurate schema, authorization and call chain; STEP-1 generic implementation paragraphs partly replaced. STEP-1–3 generic source walkthroughs and full portal semantic/link audit remain. Some writes blocked by safety checks.",
+      "summary": "Stage 4 partial: verified 45 active lessons, STEP-2 exact source, main CI success, six INKP tabs and zero missing links. Found seven STEP-2 implementation links before their corresponding explanations; MCP body-write safety checks blocked repair. Full semantic/source-link audit remains.",
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "repo": {
@@ -76,5 +76,5 @@
       }
     }
   },
-  "updated_at": "2026-10-10T20:39:51.445Z"
+  "updated_at": "2026-10-10T22:14:27.464Z"
 }
