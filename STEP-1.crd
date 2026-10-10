@@ -1,0 +1,72 @@
+{
+  "crd_version": 1,
+  "name": "Enterprise MCP Resource Gateway step 1",
+  "description": "Cumulative educational gateway architecture (not real MCP protocol).",
+  "generated_at": "2026-10-10T11:42:00Z",
+  "source": {
+    "repo": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
+    "revision": "step-01",
+    "roots": {
+      "backend": "app"
+    },
+    "stacks": [
+      "python-fastapi"
+    ]
+  },
+  "step": {
+    "no": 1,
+    "of": 6,
+    "title": "Resource catalog and access-scoped data model",
+    "branch": "step-01",
+    "previous": null,
+    "removed": []
+  },
+  "flows": [
+    {
+      "id": "gateway",
+      "name": "Authorized resource access",
+      "description": "Synthetic learning flow",
+      "entry": "be.catalog"
+    }
+  ],
+  "components": [
+    {
+      "id": "be.catalog",
+      "name": "catalog",
+      "kind": "function",
+      "side": "backend",
+      "layer": "provider",
+      "description": "The catalog component introduced by the cumulative learning project.",
+      "flows": [
+        "gateway"
+      ],
+      "source": {
+        "file": "app/features/feature_resources/providers/catalog.py",
+        "symbol": "catalog",
+        "lines": [
+          1,
+          30
+        ]
+      },
+      "owner": "feature_resources",
+      "component_reason": "Teaches isolated catalog contract and behavior.",
+      "status": "observed",
+      "step_change": "added",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [
+        {
+          "id": "out-catalog",
+          "name": "result",
+          "description": "Contract result or bounded rejection."
+        }
+      ],
+      "attributes": {
+        "validations_note": "See Python source and pytest contract checks."
+      }
+    }
+  ],
+  "dependencies": [],
+  "unresolved": []
+}
