@@ -22,7 +22,7 @@
     },
     "repo": {
       "status": "done",
-      "summary": "Repository finalized: 6 cumulative STEP branches, FINAL.crd, README, source-function CRD relations. Verified 7/7 latest GitHub Actions pytest runs completed successfully (STEP-1..STEP-6 and main).",
+      "summary": "Corrected invalid integration-test source paths in STEP-6.crd and FINAL.crd to tests/test_integration.py. MCP read-back verified both; GitHub Actions pytest completed successfully on both new STEP-6 and main commits.",
       "started_at": "2026-10-10T09:03:48.305Z",
       "finished_at": "2026-10-10T12:12:06.596Z",
       "updated_by": "api-key:for-chatgpt-test-2",
@@ -33,8 +33,10 @@
         "ci_verified": true,
         "ci_jobs_success": 7,
         "ci_jobs_total": 7,
-        "main_commit": "5439d553d14b364380d275eb276c9be99ac766a0",
-        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance"
+        "main_commit": "a73a9b2ebcfb7471613514bf133f70eada009b82",
+        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance",
+        "source_paths_corrected": true,
+        "step6_commit": "2ef75e92c08b2b61dc4bb8dc677f6291f7605c8e"
       }
     },
     "inkp": {
@@ -74,5 +76,5 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T14:15:49.284Z"
+  "updated_at": "2026-10-10T14:19:50.524Z"
 }
