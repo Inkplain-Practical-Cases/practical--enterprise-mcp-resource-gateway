@@ -4,7 +4,7 @@
     "slug": "enterprise-mcp-resource-gateway",
     "name": "Enterprise MCP Resource Gateway"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "intro": {
       "status": "done",
@@ -52,8 +52,8 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "content": {
-      "status": "in_progress",
-      "summary": "STEP-1 Components improved: five source-backed 4M explanations and immediate GitHub file links verified; Stage 4 still requires complete 45-lesson semantic audit.",
+      "status": "done",
+      "summary": "Stage 4 finished: MCP read-back verifies 8 active categories and 45 published lessons (18 Overview, six STEP categories x4, 3 Conclusion), plus six ordered INKP tabs with 87 linked executor documents and zero missing links. Inspected STEP-2 through STEP-6 lesson structures: System Design contains inkp_visualization and CRD tree with GitHub source links; Components lessons include source-linked 4M; implementation has source-code blocks, CRD tree and file links; Run & Check lessons have executable code commands. Representative Overview and Conclusion records also verified. Stage 2 GitHub Actions had 7/7 success. This is an offline educational MCP-inspired application, not proof of production MCP protocol conformance.",
       "outputs": {
         "categories": 8,
         "items": 45,
@@ -64,12 +64,15 @@
         "content_quality_qa": true,
         "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
         "ci_jobs_success": 7,
-        "ci_jobs_total": 7
+        "ci_jobs_total": 7,
+        "inkp_tabs": 6,
+        "linked_executors": 87,
+        "missing_links": 0
       },
       "started_at": "2026-10-10T11:52:29.363Z",
-      "finished_at": null,
+      "finished_at": "2026-10-10T12:36:30.809Z",
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T12:20:05.961Z"
+  "updated_at": "2026-10-10T12:36:30.809Z"
 }
