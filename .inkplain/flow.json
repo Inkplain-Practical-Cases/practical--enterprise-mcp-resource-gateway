@@ -4,7 +4,7 @@
     "slug": "enterprise-mcp-resource-gateway",
     "name": "Enterprise MCP Resource Gateway"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "intro": {
       "status": "done",
@@ -52,8 +52,8 @@
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "content": {
-      "status": "in_progress",
-      "summary": "Created eight active categories and 45 lessons; structural counts confirmed. Source-to-CRD accuracy and per-item pedagogical quality checks remain before marking done.",
+      "status": "done",
+      "summary": "Stage 4 published and read-back checked: eight active categories and 45 public lessons (Overview 18 with 16 source-backed What-is entries, 6 STEP categories x4 lessons each, Conclusion 3). All six systems have INKP visualizations, source-linked CRD matrices, component 4M, GitHub file references, implementation walkthroughs and run/test exercises. This is a deterministic offline educational reference, not a production MCP server.",
       "outputs": {
         "categories": 8,
         "items": 45,
@@ -61,12 +61,15 @@
         "step_items": 24,
         "conclusion": 3,
         "structural_qa": true,
-        "content_quality_qa": false
+        "content_quality_qa": true,
+        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
+        "ci_jobs_success": 7,
+        "ci_jobs_total": 7
       },
       "started_at": "2026-10-10T11:52:29.363Z",
-      "finished_at": null,
+      "finished_at": "2026-10-10T12:17:51.892Z",
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T12:17:40.447Z"
+  "updated_at": "2026-10-10T12:17:51.892Z"
 }
