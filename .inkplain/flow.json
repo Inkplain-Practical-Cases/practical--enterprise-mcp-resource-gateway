@@ -42,10 +42,18 @@
           3,
           5
         ],
-        "portal_final_audit_complete": false
+        "portal_final_audit_complete": false,
+        "crd_matrix_checked": true,
+        "crd_matrix_issues": 0,
+        "assembly_lessons_fixed": [
+          4,
+          5,
+          6
+        ],
+        "step6_component_4m_fixed": true
       },
       "started_at": "2026-10-10T11:52:29.363Z",
-      "summary": "Stage-4 QA continues: reviewed all 24 STEP lessons (6 x 4) for CRD, INKP, source-link and 4M block presence. Six INKP tabs have zero missing linked documents; latest main CI success (run 38101847585). Full per-component source-path/semantic and Overview/Conclusion review still required; not done.",
+      "summary": "Read all 45 portal items; audited 16 What-is and 24 STEP structures, six STEP CRDs and FINAL (22 stable component IDs, exactly one added per component), and six INKP tabs with zero missing links. Corrected STEP-4/5/6 implementation puzzle-assembly sections and STEP-6 test components' four distinct 4M paragraphs; all four items read back. Full per-component source/semantic link audit remains.",
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "repo": {
@@ -82,5 +90,5 @@
       }
     }
   },
-  "updated_at": "2026-10-11T02:10:13.494Z"
+  "updated_at": "2026-10-11T03:17:04.434Z"
 }
