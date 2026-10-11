@@ -36,10 +36,16 @@
         "conclusion": 3,
         "structural_qa": true,
         "step_items": 24,
-        "missing_links": 0
+        "missing_links": 0,
+        "test_source_links_verified_steps": [
+          2,
+          3,
+          5
+        ],
+        "portal_final_audit_complete": false
       },
       "started_at": "2026-10-10T11:52:29.363Z",
-      "summary": "45/45 lessons read for structure; STEP-2 implementation has seven generic code explanations and source links placed before explanation. All four linked STEP-2 source files exist. Prepared content repair blocked by MCP safety checks. Six INKP tabs/87 linked executors/0 missing; semantic/source-link repairs still required.",
+      "summary": "Portal QA partial: STEP-2, STEP-3 and STEP-5 Run lessons now include correct GitHub links to actual tests/test_resources.py, tests/test_discovery.py and tests/test_audit.py; all source files and updated blocks read back. STEP-5 audit-test explanation aligned with its real assertions. Complete 45-lesson semantic and per-component source-link audit still open.",
       "updated_by": "api-key:for-chatgpt-test-2"
     },
     "repo": {
@@ -76,5 +82,5 @@
       }
     }
   },
-  "updated_at": "2026-10-10T23:21:18.968Z"
+  "updated_at": "2026-10-11T01:26:28.759Z"
 }
