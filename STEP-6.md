@@ -14,3 +14,6 @@ Read STEP-6.crd alongside the source and test files. Refused access must not lea
 
 ## Next
 Promote this tested code to main and inspect FINAL.crd.
+
+## Database (Entity) Relations
+The MCP gateway persists redacted HTTP request/outcome audit in SQLite. See STEP-6.erd and STEP-6-ERD.
