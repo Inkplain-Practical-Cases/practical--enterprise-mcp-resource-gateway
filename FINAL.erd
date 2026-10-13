@@ -1,0 +1,71 @@
+{
+  "erd_version": 1,
+  "name": "enterprise-mcp-resource-gateway",
+  "step": "final",
+  "engine": "sqlite",
+  "generated_from": [
+    "app/providers/provider_record_request_audit.py",
+    "app/core/request_audit_middleware.py",
+    "app/main.py"
+  ],
+  "entities": [
+    {
+      "name": "mcp_api_requests",
+      "kind": "table",
+      "step_change": "unchanged",
+      "source": "app/providers/provider_record_request_audit.py",
+      "description": "Persistent MCP gateway HTTP request metadata; no resources or credentials.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "TEXT",
+          "key": "PK"
+        },
+        {
+          "name": "route",
+          "type": "TEXT"
+        },
+        {
+          "name": "method",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "name": "mcp_api_events",
+      "kind": "table",
+      "step_change": "unchanged",
+      "source": "app/providers/provider_record_request_audit.py",
+      "description": "Response status and latency events associated with gateway request IDs.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "key": "PK"
+        },
+        {
+          "name": "request_id",
+          "type": "TEXT",
+          "references": "mcp_api_requests.id"
+        },
+        {
+          "name": "http_status",
+          "type": "INTEGER"
+        },
+        {
+          "name": "duration_ms",
+          "type": "REAL"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relations": []
+}
