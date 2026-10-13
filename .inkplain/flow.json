@@ -71,14 +71,16 @@
         "inkp_tabs": 6,
         "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
         "erd_audit_complete": true,
-        "erd_applicable_steps": [],
-        "erd_not_applicable": true,
-        "erd_lessons_created": 0,
+        "erd_applicable_steps": [
+          6
+        ],
+        "erd_not_applicable": false,
+        "erd_lessons_created": 1,
         "erd_item_title": "Database (Entity) Relations",
         "erd_audit_note": "Resource catalog immutable in-memory fixture; bounded audit deque is process memory only."
       },
       "status": "done",
-      "summary": "Source-backed persistence audit completed: Resource catalog immutable in-memory fixture; bounded audit deque is process memory only. Therefore no STEP-N.erd, ERD tabs or Database lesson is warranted.",
+      "summary": "Added the STEP-6 SQLite database ERD, Simulator tab and database lesson. Read-back verified.",
       "started_at": "2026-10-10T11:52:29.363Z"
     },
     "intro": {
@@ -96,5 +98,5 @@
       "started_at": "2026-10-10T08:45:37.259Z"
     }
   },
-  "updated_at": "2026-10-13T15:14:02.455Z"
+  "updated_at": "2026-10-13T15:59:24.222Z"
 }
