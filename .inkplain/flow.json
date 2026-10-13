@@ -4,91 +4,97 @@
     "slug": "enterprise-mcp-resource-gateway",
     "name": "Enterprise MCP Resource Gateway"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "inkp": {
       "outputs": {
-        "tabs": 6,
-        "missing_links": 0,
         "inkp_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway/blob/main/enterprise-mcp-resource-gateway.inkp",
         "linked_executors": 87,
-        "inkp_path": "enterprise-mcp-resource-gateway.inkp"
+        "missing_links": 0,
+        "inkp_path": "enterprise-mcp-resource-gateway.inkp",
+        "tabs": 6
       },
       "status": "done",
-      "started_at": "2026-10-10T11:52:27.272Z",
       "updated_by": "api-key:for-chatgpt-test-2",
-      "summary": "Six ordered Simulator tabs STEP-1..STEP-6 rebuilt from the revised source-level CRDs, with 87 linked Process Executor documents. MCP get_inkp_summary confirms 0 missing links in every tab.",
-      "finished_at": "2026-10-10T11:52:27.272Z"
+      "started_at": "2026-10-10T11:52:27.272Z",
+      "finished_at": "2026-10-10T11:52:27.272Z",
+      "summary": "Six ordered Simulator tabs STEP-1..STEP-6 rebuilt from the revised source-level CRDs, with 87 linked Process Executor documents. MCP get_inkp_summary confirms 0 missing links in every tab."
+    },
+    "repo": {
+      "started_at": "2026-10-10T09:03:48.305Z",
+      "summary": "Corrected invalid integration-test source paths in STEP-6.crd and FINAL.crd to tests/test_integration.py. MCP read-back verified both; GitHub Actions pytest completed successfully on both new STEP-6 and main commits.",
+      "finished_at": "2026-10-10T12:12:06.596Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "status": "done",
+      "outputs": {
+        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance",
+        "main_committed": true,
+        "step6_commit": "2ef75e92c08b2b61dc4bb8dc677f6291f7605c8e",
+        "ci_jobs_success": 7,
+        "ci_jobs_total": 7,
+        "ci_verified": true,
+        "source_paths_corrected": true,
+        "main_commit": "a73a9b2ebcfb7471613514bf133f70eada009b82",
+        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
+        "steps": 6
+      }
     },
     "content": {
-      "status": "in_progress",
-      "finished_at": null,
+      "finished_at": "2026-10-11T08:36:15.467Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
       "outputs": {
-        "inkp_tabs": 6,
-        "categories": 8,
-        "ci_jobs_success": 7,
-        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
-        "overview": 18,
-        "content_quality_qa": true,
-        "ci_jobs_total": 7,
-        "items": 45,
-        "linked_executors": 87,
-        "conclusion": 3,
-        "structural_qa": true,
-        "step_items": 24,
-        "missing_links": 0,
         "test_source_links_verified_steps": [
           2,
           3,
           5
         ],
-        "portal_final_audit_complete": false,
-        "crd_matrix_checked": true,
-        "crd_matrix_issues": 0,
         "assembly_lessons_fixed": [
           4,
           5,
           6
         ],
-        "step6_component_4m_fixed": true
-      },
-      "started_at": "2026-10-10T11:52:29.363Z",
-      "summary": "Read all 45 portal items; audited 16 What-is and 24 STEP structures, six STEP CRDs and FINAL (22 stable component IDs, exactly one added per component), and six INKP tabs with zero missing links. Corrected STEP-4/5/6 implementation puzzle-assembly sections and STEP-6 test components' four distinct 4M paragraphs; all four items read back. Full per-component source/semantic link audit remains.",
-      "updated_by": "api-key:for-chatgpt-test-2"
-    },
-    "repo": {
-      "status": "done",
-      "summary": "Corrected invalid integration-test source paths in STEP-6.crd and FINAL.crd to tests/test_integration.py. MCP read-back verified both; GitHub Actions pytest completed successfully on both new STEP-6 and main commits.",
-      "started_at": "2026-10-10T09:03:48.305Z",
-      "outputs": {
-        "ci_jobs_success": 7,
-        "source_paths_corrected": true,
-        "ci_verified": true,
-        "main_commit": "a73a9b2ebcfb7471613514bf133f70eada009b82",
-        "step6_commit": "2ef75e92c08b2b61dc4bb8dc677f6291f7605c8e",
-        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-mcp-resource-gateway",
-        "main_committed": true,
-        "learning_scope": "offline synthetic MCP-inspired HTTP teaching app, not production MCP protocol compliance",
         "ci_jobs_total": 7,
-        "steps": 6
+        "content_quality_qa": true,
+        "linked_executors": 87,
+        "crd_matrix_checked": true,
+        "overview": 18,
+        "categories": 8,
+        "step6_component_4m_fixed": true,
+        "step_items": 24,
+        "missing_links": 0,
+        "conclusion": 3,
+        "structural_qa": true,
+        "crd_matrix_issues": 0,
+        "ci_jobs_success": 7,
+        "portal_final_audit_complete": false,
+        "items": 45,
+        "inkp_tabs": 6,
+        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [],
+        "erd_not_applicable": true,
+        "erd_lessons_created": 0,
+        "erd_item_title": "Database (Entity) Relations",
+        "erd_audit_note": "Resource catalog immutable in-memory fixture; bounded audit deque is process memory only."
       },
-      "finished_at": "2026-10-10T12:12:06.596Z",
-      "updated_by": "api-key:for-chatgpt-test-2"
+      "status": "done",
+      "summary": "Source-backed persistence audit completed: Resource catalog immutable in-memory fixture; bounded audit deque is process memory only. Therefore no STEP-N.erd, ERD tabs or Database lesson is warranted.",
+      "started_at": "2026-10-10T11:52:29.363Z"
     },
     "intro": {
       "updated_by": "api-key:for-chatgpt-test-2",
-      "summary": "Verified Junior FDE case, six skill links, seven substantial introduction sections with labeled HTML architecture diagram and existing Media Library cover (reused; bespoke cover remains optional).",
-      "started_at": "2026-10-10T08:45:37.259Z",
-      "status": "done",
-      "finished_at": "2026-10-10T09:03:20.195Z",
       "outputs": {
-        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
-        "skills_linked": 6,
-        "level": "junior",
+        "cover_reused": true,
         "intro_sections": 7,
-        "cover_reused": true
-      }
+        "skills_linked": 6,
+        "portal_url": "/practical-case/enterprise-mcp-resource-gateway",
+        "level": "junior"
+      },
+      "summary": "Verified Junior FDE case, six skill links, seven substantial introduction sections with labeled HTML architecture diagram and existing Media Library cover (reused; bespoke cover remains optional).",
+      "finished_at": "2026-10-10T09:03:20.195Z",
+      "status": "done",
+      "started_at": "2026-10-10T08:45:37.259Z"
     }
   },
-  "updated_at": "2026-10-11T03:17:04.434Z"
+  "updated_at": "2026-10-13T15:14:02.455Z"
 }
